@@ -47,7 +47,7 @@ export default function BlogDetailPage() {
         return (
             <div className="min-h-screen flex items-center justify-center pt-20">
                 <div className="text-center">
-                    <div className="w-20 h-20 bg-[#EEEDFF] rounded-2xl flex items-center justify-center mx-auto mb-4"><BookOpen size={32} className="text-[#2623D2]" /></div>
+                    <div className="w-20 h-20 bg-[#ECFDF5] rounded-2xl flex items-center justify-center mx-auto mb-4"><BookOpen size={32} className="text-[#1E8E3E]" /></div>
                     <h2 className="text-2xl font-bold text-[#181818] mb-2">Blog Yazısı Bulunamadı</h2>
                     <p className="text-gray-500 mb-6">Aradığınız içerik mevcut değil.</p>
                     <Link href="/blog" className="btn-primary">Bloga Dön</Link>
@@ -62,12 +62,12 @@ export default function BlogDetailPage() {
         <div className="min-h-screen bg-[var(--wincoi-gray-50)] pt-24 sm:pt-28 pb-16">
             <div className="max-w-3xl mx-auto px-4 sm:px-6">
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-                    <Link href="/blog" className="inline-flex items-center gap-2 text-[#2623D2] font-semibold text-sm mb-8 hover:gap-3 transition-all">
+                    <Link href="/blog" className="inline-flex items-center gap-2 text-[#1E8E3E] font-semibold text-sm mb-8 hover:gap-3 transition-all">
                         <ArrowLeft size={16} /> Tüm Yazılar
                     </Link>
 
                     <div className="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100">
-                        <div className="h-48 sm:h-64 bg-gradient-to-br from-[#2623D2] to-[#116DFF] flex items-center justify-center p-8">
+                        <div className="h-48 sm:h-64 bg-gradient-to-br from-[#1E8E3E] to-[#34D058] flex items-center justify-center p-8">
                             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white text-center leading-snug">{blog.title}</h1>
                         </div>
                         <div className="p-6 sm:p-10">

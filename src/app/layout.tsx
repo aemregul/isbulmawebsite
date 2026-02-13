@@ -13,24 +13,24 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Wincoi - İş İlanları Platformu",
-    template: "%s | Wincoi",
+    default: "Kolay İş Buluyorum - İş İlanları Platformu",
+    template: "%s | Kolay İş Buluyorum",
   },
   description: "Gençler ile işverenleri buluşturarak istihdamı artıran, yeni nesil iş platformu.",
   keywords: "iş ilanları, kariyer, istihdam, stajyer, part-time, wincoi, iş ara, iş bul",
-  authors: [{ name: "Wincoi" }],
-  creator: "Wincoi",
+  authors: [{ name: "Kolay İş Buluyorum" }],
+  creator: "Kolay İş Buluyorum",
   metadataBase: new URL("https://isbulmawebsite.vercel.app"),
   openGraph: {
-    title: "Wincoi - İş İlanları Platformu",
+    title: "Kolay İş Buluyorum - İş İlanları Platformu",
     description: "Gençler ile işverenleri buluşturarak istihdamı artıran, yeni nesil iş platformu.",
     type: "website",
     locale: "tr_TR",
-    siteName: "Wincoi",
+    siteName: "Kolay İş Buluyorum",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wincoi - İş İlanları Platformu",
+    title: "Kolay İş Buluyorum - İş İlanları Platformu",
     description: "Gençler ile işverenleri buluşturarak istihdamı artıran, yeni nesil iş platformu.",
   },
   robots: {

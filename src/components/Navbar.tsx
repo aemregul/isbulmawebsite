@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, User, LogOut, PlusCircle } from 'lucide-react';
@@ -63,19 +62,15 @@ export default function Navbar() {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center"
+                className="flex items-center gap-0.5"
               >
-                <Image
-                  src="/logo.png"
-                  alt="Wincoi"
-                  width={140}
-                  height={40}
-                  className="h-6 sm:h-10 w-auto transition-all duration-300"
-                  style={{
-                    filter: !isScrolled && isHeroPage ? 'brightness(0) invert(1)' : 'none',
-                  }}
-                  priority
-                />
+                <span className={`text-lg sm:text-xl font-black tracking-tight transition-colors duration-300 ${!isScrolled && isHeroPage ? 'text-white' : 'text-gray-900'
+                  }`}>
+                  kolay
+                </span>
+                <span className="bg-[#1E8E3E] text-white text-lg sm:text-xl font-black px-2 py-0.5 rounded-lg tracking-tight">
+                  iş buluyorum
+                </span>
               </motion.div>
             </Link>
 
@@ -87,10 +82,10 @@ export default function Navbar() {
                   href={link.href}
                   className={`px-4 py-2 rounded-lg text-[15px] font-medium transition-all duration-300 ${pathname === link.href
                     ? isScrolled || !isHeroPage
-                      ? 'text-[#2623D2] bg-[#EEEDFF]'
+                      ? 'text-[#1E8E3E] bg-[#ECFDF5]'
                       : 'text-white bg-white/20'
                     : isScrolled || !isHeroPage
-                      ? 'text-gray-600 hover:text-[#2623D2] hover:bg-[#EEEDFF]'
+                      ? 'text-gray-600 hover:text-[#1E8E3E] hover:bg-[#ECFDF5]'
                       : 'text-white/80 hover:text-white hover:bg-white/10'
                     }`}
                 >
@@ -131,7 +126,7 @@ export default function Navbar() {
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                       className={`px-5 py-2.5 rounded-lg text-sm font-semibold transition-all ${isScrolled || !isHeroPage
-                        ? 'text-[#2623D2] hover:bg-[#EEEDFF]'
+                        ? 'text-[#1E8E3E] hover:bg-[#ECFDF5]'
                         : 'text-white hover:bg-white/10'
                         }`}
                     >
@@ -155,7 +150,7 @@ export default function Navbar() {
             <button
               onClick={() => setIsMobileOpen(!isMobileOpen)}
               className={`md:hidden p-2 rounded-lg transition-colors ${isScrolled || !isHeroPage
-                ? 'text-[#2623D2]'
+                ? 'text-[#1E8E3E]'
                 : 'text-white'
                 }`}
             >
@@ -194,8 +189,8 @@ export default function Navbar() {
                       href={link.href}
                       onClick={() => setIsMobileOpen(false)}
                       className={`px-4 py-3 rounded-xl text-base font-medium transition-all ${pathname === link.href
-                        ? 'text-[#2623D2] bg-[#EEEDFF]'
-                        : 'text-gray-600 hover:text-[#2623D2] hover:bg-[#EEEDFF]'
+                        ? 'text-[#1E8E3E] bg-[#ECFDF5]'
+                        : 'text-gray-600 hover:text-[#1E8E3E] hover:bg-[#ECFDF5]'
                         }`}
                     >
                       {link.label}
@@ -227,7 +222,7 @@ export default function Navbar() {
                       <Link
                         href="/giris"
                         onClick={() => setIsMobileOpen(false)}
-                        className="px-4 py-3 rounded-xl text-base font-medium text-[#2623D2] hover:bg-[#EEEDFF] text-center"
+                        className="px-4 py-3 rounded-xl text-base font-medium text-[#1E8E3E] hover:bg-[#ECFDF5] text-center"
                       >
                         Giriş Yap
                       </Link>

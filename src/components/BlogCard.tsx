@@ -30,10 +30,10 @@ export default function BlogCard({
 
     // Generate a gradient based on index
     const gradients = [
-        'from-[#2623D2] to-[#116DFF]',
-        'from-[#1B1A9E] to-[#2623D2]',
-        'from-[#116DFF] to-[#5A48F5]',
-        'from-[#2623D2] to-[#6366F1]',
+        'from-[#1E8E3E] to-[#34D058]',
+        'from-[#166534] to-[#1E8E3E]',
+        'from-[#34D058] to-[#22C55E]',
+        'from-[#1E8E3E] to-[#16A34A]',
     ];
 
     return (
@@ -65,7 +65,7 @@ export default function BlogCard({
                                 {formatDate(createdAt)}
                             </span>
 
-                            <span className="inline-flex items-center gap-1 text-[#2623D2] text-sm font-semibold group-hover:gap-2 transition-all">
+                            <span className="inline-flex items-center gap-1 text-[#1E8E3E] text-sm font-semibold group-hover:gap-2 transition-all">
                                 Devamını Oku
                                 <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                             </span>

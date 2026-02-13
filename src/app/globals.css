@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --wincoi-blue: #2623D2;
-  --wincoi-blue-light: #116DFF;
-  --wincoi-blue-dark: #1B1A9E;
-  --wincoi-blue-50: #EEEDFF;
-  --wincoi-blue-100: #DDE2FF;
+  --wincoi-green: #1E8E3E;
+  --wincoi-green-light: #34D058;
+  --wincoi-green-dark: #166534;
+  --wincoi-green-50: #ECFDF5;
+  --wincoi-green-100: #D1FAE5;
   --wincoi-white: #FFFFFF;
   --wincoi-gray-50: #F8F9FC;
   --wincoi-gray-100: #EEF0F6;
@@ -13,9 +13,13 @@
   --wincoi-gray-300: #9CA3AF;
   --wincoi-text: #181818;
   --wincoi-text-secondary: #6B7280;
-  --wincoi-green: #22C55E;
+  --wincoi-accent: #22C55E;
   --wincoi-red: #EF4444;
   --wincoi-orange: #F59E0B;
+  /* Legacy aliases */
+  --wincoi-blue: var(--wincoi-green);
+  --wincoi-blue-light: var(--wincoi-green-light);
+  --wincoi-blue-dark: var(--wincoi-green-dark);
 }
 
 *,
@@ -105,11 +109,11 @@ body {
 
   0%,
   100% {
-    box-shadow: 0 0 20px rgba(38, 35, 210, 0.3);
+    box-shadow: 0 0 20px rgba(30, 142, 62, 0.3);
   }
 
   50% {
-    box-shadow: 0 0 50px rgba(38, 35, 210, 0.6), 0 0 80px rgba(17, 109, 255, 0.3);
+    box-shadow: 0 0 50px rgba(30, 142, 62, 0.6), 0 0 80px rgba(52, 208, 88, 0.3);
   }
 }
 
@@ -287,7 +291,7 @@ body {
 
 .card-hover:hover {
   transform: translateY(-6px);
-  box-shadow: 0 24px 48px rgba(38, 35, 210, 0.12), 0 0 0 1px rgba(38, 35, 210, 0.06);
+  box-shadow: 0 24px 48px rgba(30, 142, 62, 0.12), 0 0 0 1px rgba(30, 142, 62, 0.06);
 }
 
 @media (hover: none) {
@@ -339,7 +343,7 @@ body {
 }
 
 .text-glow {
-  text-shadow: 0 0 40px rgba(38, 35, 210, 0.3);
+  text-shadow: 0 0 40px rgba(30, 142, 62, 0.3);
 }
 
 /* ===========================
@@ -347,19 +351,19 @@ body {
    =========================== */
 
 .hero-gradient {
-  background: linear-gradient(135deg, #0F0E47 0%, #1B1A9E 25%, #2623D2 50%, #116DFF 75%, #3B82F6 100%);
+  background: linear-gradient(135deg, #0A0F0D 0%, #0D1A14 25%, #0F2318 50%, #0D1A14 75%, #080E0B 100%);
   background-size: 200% 200%;
   animation: gradient-shift 12s ease infinite;
 }
 
 .mesh-gradient {
   background:
-    radial-gradient(at 40% 20%, #2623D2 0px, transparent 50%),
-    radial-gradient(at 80% 0%, #116DFF 0px, transparent 50%),
-    radial-gradient(at 0% 50%, #5A48F5 0px, transparent 50%),
-    radial-gradient(at 80% 80%, #1B1A9E 0px, transparent 50%),
-    radial-gradient(at 0% 100%, #3B82F6 0px, transparent 50%);
-  background-color: #0F0E47;
+    radial-gradient(at 40% 20%, #1E8E3E 0px, transparent 50%),
+    radial-gradient(at 80% 0%, #22C55E 0px, transparent 50%),
+    radial-gradient(at 0% 50%, #1E8E3E 0px, transparent 50%),
+    radial-gradient(at 80% 80%, #166534 0px, transparent 50%),
+    radial-gradient(at 0% 100%, #22C55E 0px, transparent 50%);
+  background-color: #0A0F0D;
 }
 
 /* Floating decorative shapes */
@@ -401,7 +405,7 @@ body {
   top: 0;
   left: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--wincoi-blue), var(--wincoi-blue-light), #5A48F5);
+  background: linear-gradient(90deg, var(--wincoi-blue), var(--wincoi-blue-light), #22C55E);
   z-index: 100;
   transform-origin: left;
   border-radius: 0 2px 2px 0;
@@ -446,7 +450,7 @@ body {
 .input-field:focus {
   outline: none;
   border-color: var(--wincoi-blue);
-  box-shadow: 0 0 0 4px rgba(38, 35, 210, 0.1);
+  box-shadow: 0 0 0 4px rgba(30, 142, 62, 0.1);
 }
 
 .input-field::placeholder {
@@ -485,7 +489,7 @@ body {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(38, 35, 210, 0.4);
+  box-shadow: 0 10px 30px rgba(30, 142, 62, 0.4);
 }
 
 .btn-primary:active {
@@ -502,7 +506,7 @@ body {
   position: absolute;
   inset: -2px;
   border-radius: inherit;
-  background: linear-gradient(135deg, var(--wincoi-blue), var(--wincoi-blue-light), #5A48F5);
+  background: linear-gradient(135deg, var(--wincoi-blue), var(--wincoi-blue-light), #22C55E);
   z-index: -1;
   opacity: 0;
   transition: opacity 0.3s ease;

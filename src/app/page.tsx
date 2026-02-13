@@ -164,13 +164,13 @@ function StepCard({ step, index, icon: Icon }: { step: { title: string; descript
       className="relative group"
     >
       {/* Step number */}
-      <div className="absolute -top-3 -left-3 w-10 h-10 rounded-xl bg-gradient-to-br from-[#2623D2] to-[#116DFF] flex items-center justify-center text-white font-bold text-sm shadow-lg shadow-[#2623D2]/30 z-10">
+      <div className="absolute -top-3 -left-3 w-10 h-10 rounded-xl bg-gradient-to-br from-[#1E8E3E] to-[#34D058] flex items-center justify-center text-white font-bold text-sm shadow-lg shadow-[#1E8E3E]/30 z-10">
         {index + 1}
       </div>
 
-      <div className="glass-card rounded-2xl p-8 pt-10 h-full transition-all duration-500 group-hover:shadow-xl group-hover:shadow-[#2623D2]/10 group-hover:-translate-y-2">
-        <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#EEEDFF] to-[#DDE2FF] flex items-center justify-center mb-5">
-          <Icon size={26} className="text-[#2623D2]" />
+      <div className="glass-card rounded-2xl p-8 pt-10 h-full transition-all duration-500 group-hover:shadow-xl group-hover:shadow-[#1E8E3E]/10 group-hover:-translate-y-2">
+        <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#ECFDF5] to-[#D1FAE5] flex items-center justify-center mb-5">
+          <Icon size={26} className="text-[#1E8E3E]" />
         </div>
         <h3 className="text-xl font-bold text-[#181818] mb-3">{step.title}</h3>
         <p className="text-gray-500 leading-relaxed">{step.description}</p>
@@ -238,21 +238,21 @@ export default function HomePage() {
       {/* ============================
           SECTION 1: HERO + STATS (Unified)
           ============================ */}
-      <section ref={heroRef} className="relative min-h-screen flex flex-col overflow-hidden" style={{ background: 'linear-gradient(160deg, #0F0E47 0%, #1B1A9E 25%, #2623D2 45%, #116DFF 65%, #1B1A9E 85%, #0A0A1B 100%)' }}>
-        {/* Animated blobs */}
+      <section ref={heroRef} className="relative min-h-screen flex flex-col overflow-hidden" style={{ background: 'linear-gradient(160deg, #0A0F0D 0%, #0D1A14 20%, #0F2318 40%, #0D1A14 60%, #0A1210 80%, #080E0B 100%)' }}>
+        {/* Animated blobs — subtle green accent glow */}
         <motion.div
           style={{ y: shape1Y, willChange: 'transform', transform: 'translateZ(0)' }}
-          className="absolute w-[500px] h-[500px] rounded-full bg-[#5A48F5] opacity-20 blur-[80px] -top-20 -left-40"
+          className="absolute w-[500px] h-[500px] rounded-full bg-[#1E8E3E] opacity-[0.12] blur-[100px] -top-20 -left-40"
           aria-hidden="true"
         />
         <motion.div
           style={{ y: shape2Y, willChange: 'transform', transform: 'translateZ(0)' }}
-          className="absolute w-[600px] h-[600px] rounded-full bg-[#116DFF] opacity-15 blur-[100px] -bottom-40 -right-40"
+          className="absolute w-[600px] h-[600px] rounded-full bg-[#22C55E] opacity-[0.08] blur-[120px] -bottom-40 -right-40"
           aria-hidden="true"
         />
         <motion.div
           style={{ y: shape3Y, willChange: 'transform', transform: 'translateZ(0)' }}
-          className="absolute w-[300px] h-[300px] rounded-full bg-[#3B82F6] opacity-20 blur-[60px] top-1/3 right-1/4"
+          className="absolute w-[300px] h-[300px] rounded-full bg-[#34D058] opacity-[0.10] blur-[80px] top-1/3 right-1/4"
           aria-hidden="true"
         />
 
@@ -329,7 +329,7 @@ export default function HomePage() {
                   placeholder="İlan başlığı ara..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-3 sm:py-3.5 bg-gray-50/80 rounded-xl text-sm sm:text-[15px] focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#2623D2]/20 transition-all text-gray-700 placeholder:text-gray-400"
+                  className="w-full pl-12 pr-4 py-3 sm:py-3.5 bg-gray-50/80 rounded-xl text-sm sm:text-[15px] focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#1E8E3E]/20 transition-all text-gray-700 placeholder:text-gray-400"
                 />
               </div>
               <div className="relative w-full sm:w-auto">
@@ -337,7 +337,7 @@ export default function HomePage() {
                 <select
                   value={selectedCity}
                   onChange={(e) => setSelectedCity(e.target.value)}
-                  className="appearance-none w-full sm:w-auto pl-11 pr-10 py-3 sm:py-3.5 bg-gray-50/80 rounded-xl text-sm sm:text-[15px] text-gray-700 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#2623D2]/20 transition-all cursor-pointer sm:min-w-[160px]"
+                  className="appearance-none w-full sm:w-auto pl-11 pr-10 py-3 sm:py-3.5 bg-gray-50/80 rounded-xl text-sm sm:text-[15px] text-gray-700 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#1E8E3E]/20 transition-all cursor-pointer sm:min-w-[160px]"
                 >
                   {cities.map((city) => (
                     <option key={city} value={city}>
@@ -427,16 +427,16 @@ export default function HomePage() {
           </div>
         </div>
         {/* Bottom gradient fade into next section */}
-        <div className="absolute bottom-0 left-0 right-0 h-40 pointer-events-none" style={{ background: 'linear-gradient(to bottom, transparent, #0A0A1B)' }} />
+        <div className="absolute bottom-0 left-0 right-0 h-40 pointer-events-none" style={{ background: 'linear-gradient(to bottom, transparent, #080E0B)' }} />
       </section>
 
       {/* ============================
           SECTION 3: HOW IT WORKS (Immersive Scrollytelling)
           ============================ */}
-      <section className="relative pt-8 pb-24 sm:pt-12 sm:pb-36 overflow-hidden bg-[#0A0A1B]">
+      <section className="relative pt-8 pb-24 sm:pt-12 sm:pb-36 overflow-hidden bg-[#080E0B]">
         {/* Ambient glow effects */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#2623D2] opacity-[0.07] blur-[120px] rounded-full" />
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#116DFF] opacity-[0.05] blur-[100px] rounded-full" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#1E8E3E] opacity-[0.07] blur-[120px] rounded-full" />
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#34D058] opacity-[0.05] blur-[100px] rounded-full" />
 
         {/* Subtle grid */}
         <div
@@ -460,17 +460,17 @@ export default function HomePage() {
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="inline-block px-5 py-2 rounded-full bg-white/5 border border-white/10 text-[#818CF8] text-sm font-semibold mb-5 backdrop-blur-sm"
+              className="inline-block px-5 py-2 rounded-full bg-white/5 border border-white/10 text-[#6EE7B7] text-sm font-semibold mb-5 backdrop-blur-sm"
             >
               Nasıl Çalışır?
             </motion.span>
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white mb-5 leading-tight">
               3 Adımda{' '}
-              <span className="bg-gradient-to-r from-[#818CF8] via-[#6366F1] to-[#4F46E5] bg-clip-text text-transparent">Kariyerine</span>
+              <span className="bg-gradient-to-r from-[#6EE7B7] via-[#16A34A] to-[#1E8E3E] bg-clip-text text-transparent">Kariyerine</span>
               {' '}Başla
             </h2>
             <p className="text-white/40 text-lg sm:text-xl max-w-xl mx-auto">
-              Wincoi ile iş bulmak hiç bu kadar kolay olmamıştı.
+              Kolay İş Buluyorum ile iş bulmak hiç bu kadar kolay olmamıştı.
             </p>
           </motion.div>
 
@@ -503,7 +503,7 @@ export default function HomePage() {
                       </span>
                       {/* Glow behind number */}
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-24 h-24 rounded-full bg-[#6366F1] opacity-20 blur-[40px]" />
+                        <div className="w-24 h-24 rounded-full bg-[#16A34A] opacity-20 blur-[40px]" />
                       </div>
                     </motion.div>
                   </div>
@@ -518,7 +518,7 @@ export default function HomePage() {
                       <div
                         className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                         style={{
-                          background: 'linear-gradient(135deg, #6366F1, #818CF8, #4F46E5, #6366F1)',
+                          background: 'linear-gradient(135deg, #16A34A, #6EE7B7, #1E8E3E, #16A34A)',
                           backgroundSize: '300% 300%',
                           animation: 'gradient-shift 4s ease infinite',
                         }}
@@ -526,20 +526,20 @@ export default function HomePage() {
                       {/* Static border for non-hover */}
                       <div className="absolute inset-0 rounded-2xl border border-white/[0.08] group-hover:border-transparent transition-all duration-500" />
 
-                      <div className="relative bg-[#12122A] rounded-2xl p-7 sm:p-9">
+                      <div className="relative bg-[#0B1F0E] rounded-2xl p-7 sm:p-9">
                         {/* Mobile step number */}
-                        <span className="sm:hidden text-xs font-bold text-[#818CF8] tracking-widest uppercase mb-3 block">
+                        <span className="sm:hidden text-xs font-bold text-[#6EE7B7] tracking-widest uppercase mb-3 block">
                           Adım {String(i + 1).padStart(2, '0')}
                         </span>
 
                         {/* Icon container */}
-                        <div className="relative w-14 h-14 rounded-xl bg-gradient-to-br from-[#6366F1]/20 to-[#4F46E5]/10 flex items-center justify-center mb-6 group-hover:from-[#6366F1]/30 group-hover:to-[#4F46E5]/20 transition-all duration-500">
-                          <Icon size={26} className="text-[#818CF8] group-hover:text-white transition-colors duration-300" />
+                        <div className="relative w-14 h-14 rounded-xl bg-gradient-to-br from-[#16A34A]/20 to-[#1E8E3E]/10 flex items-center justify-center mb-6 group-hover:from-[#16A34A]/30 group-hover:to-[#1E8E3E]/20 transition-all duration-500">
+                          <Icon size={26} className="text-[#6EE7B7] group-hover:text-white transition-colors duration-300" />
                           {/* Icon glow */}
-                          <div className="absolute inset-0 rounded-xl bg-[#6366F1] opacity-0 group-hover:opacity-20 blur-lg transition-opacity duration-500" />
+                          <div className="absolute inset-0 rounded-xl bg-[#16A34A] opacity-0 group-hover:opacity-20 blur-lg transition-opacity duration-500" />
                         </div>
 
-                        <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 group-hover:text-[#C7D2FE] transition-colors duration-300">
+                        <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 group-hover:text-[#BBF7D0] transition-colors duration-300">
                           {step.title}
                         </h3>
                         <p className="text-white/40 leading-relaxed text-[15px] group-hover:text-white/55 transition-colors duration-300">
@@ -562,7 +562,7 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 className="w-[2px] h-full origin-top"
                 style={{
-                  background: 'linear-gradient(180deg, transparent, #6366F1 20%, #818CF8 50%, #6366F1 80%, transparent)',
+                  background: 'linear-gradient(180deg, transparent, #16A34A 20%, #6EE7B7 50%, #16A34A 80%, transparent)',
                 }}
               />
               {/* Animated dot on line */}
@@ -573,7 +573,7 @@ export default function HomePage() {
                   whileInView={{ scale: 1 }}
                   transition={{ duration: 0.4, delay: 0.5 + i * 0.3 }}
                   viewport={{ once: true }}
-                  className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-[#6366F1] border-4 border-[#0A0A1B] shadow-[0_0_20px_rgba(99,102,241,0.5)]"
+                  className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-[#16A34A] border-4 border-[#021A0B] shadow-[0_0_20px_rgba(22,163,74,0.5)]"
                   style={{ top: `${15 + i * 35}%` }}
                 />
               ))}
@@ -600,7 +600,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="inline-block px-4 py-1.5 rounded-full bg-[#EEEDFF] text-[#2623D2] text-sm font-semibold mb-3"
+                className="inline-block px-4 py-1.5 rounded-full bg-[#ECFDF5] text-[#1E8E3E] text-sm font-semibold mb-3"
               >
                 Güncel İlanlar
               </motion.span>
@@ -609,7 +609,7 @@ export default function HomePage() {
               </h2>
               <p className="text-gray-500 mt-2">
                 Toplam{' '}
-                <span className="font-semibold text-[#2623D2]">
+                <span className="font-semibold text-[#1E8E3E]">
                   {filteredListings.length}
                 </span>{' '}
                 aktif ilan
@@ -690,8 +690,8 @@ export default function HomePage() {
               animate={{ opacity: 1 }}
               className="text-center py-20"
             >
-              <div className="w-20 h-20 rounded-2xl bg-[#EEEDFF] flex items-center justify-center mx-auto mb-4">
-                <Search size={32} className="text-[#2623D2]" />
+              <div className="w-20 h-20 rounded-2xl bg-[#ECFDF5] flex items-center justify-center mx-auto mb-4">
+                <Search size={32} className="text-[#1E8E3E]" />
               </div>
               <h3 className="text-xl font-bold text-[#181818] mb-2">İlan Bulunamadı</h3>
               <p className="text-gray-500">Farklı filtreler ile tekrar arayın.</p>
@@ -703,10 +703,10 @@ export default function HomePage() {
       {/* ============================
           SECTION 5: CTA (Call to Action)
           ============================ */}
-      <section className="relative py-24 sm:py-36 overflow-hidden" style={{ background: 'linear-gradient(135deg, #0F0E47 0%, #1B1A9E 30%, #2623D2 55%, #116DFF 80%, #3B82F6 100%)' }}>
-        {/* Blobs */}
-        <div className="absolute w-[400px] h-[400px] rounded-full bg-[#5A48F5] opacity-20 blur-[80px] -top-20 -right-20" />
-        <div className="absolute w-[300px] h-[300px] rounded-full bg-[#116DFF] opacity-15 blur-[80px] -bottom-20 -left-20" />
+      <section className="relative py-24 sm:py-36 overflow-hidden" style={{ background: 'linear-gradient(135deg, #0A0F0D 0%, #0D1A14 30%, #0F2318 55%, #0D1A14 80%, #080E0B 100%)' }}>
+        {/* Blobs — subtle green accent */}
+        <div className="absolute w-[400px] h-[400px] rounded-full bg-[#1E8E3E] opacity-[0.12] blur-[100px] -top-20 -right-20" />
+        <div className="absolute w-[300px] h-[300px] rounded-full bg-[#22C55E] opacity-[0.08] blur-[100px] -bottom-20 -left-20" />
 
         {/* Grid overlay */}
         <div
@@ -755,7 +755,7 @@ export default function HomePage() {
               <span className="text-white/80">Adımı At</span>
             </h2>
             <p className="text-white/50 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-              Wincoi ile iş dünyasına güçlü bir giriş yap.
+              Kolay İş Buluyorum ile iş dünyasına güçlü bir giriş yap.
               Ücretsiz hesap oluştur ve fırsatları kaçırma.
             </p>
 

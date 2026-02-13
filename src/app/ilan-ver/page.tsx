@@ -48,7 +48,7 @@ export default function CreateListingPage() {
         <div className="min-h-screen bg-[var(--wincoi-gray-50)] pt-24 sm:pt-28 pb-16">
             <div className="max-w-2xl mx-auto px-4 sm:px-6">
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="text-center mb-10">
-                    <div className="w-14 h-14 bg-gradient-to-br from-[#2623D2] to-[#116DFF] rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-[#2623D2]/20"><FileText size={24} className="text-white" /></div>
+                    <div className="w-14 h-14 bg-gradient-to-br from-[#1E8E3E] to-[#34D058] rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-[#1E8E3E]/20"><FileText size={24} className="text-white" /></div>
                     <h1 className="text-3xl font-bold text-[#181818] mb-2">İlan Ver</h1>
                     <p className="text-gray-500">İlanınızı oluşturun, onay sonrası yayına alınsın.</p>
                 </motion.div>

@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
+
 import { motion } from 'framer-motion';
 
 export default function Footer() {
@@ -17,15 +17,9 @@ export default function Footer() {
                             transition={{ duration: 0.5 }}
                             viewport={{ once: true }}
                         >
-                            <div className="flex items-center gap-2 mb-4">
-                                <Image
-                                    src="/logo.png"
-                                    alt="Wincoi"
-                                    width={120}
-                                    height={35}
-                                    className="h-8 w-auto"
-                                    style={{ filter: 'brightness(0) invert(1)' }}
-                                />
+                            <div className="flex items-center gap-0.5 mb-4">
+                                <span className="text-white text-lg font-black tracking-tight">kolay</span>
+                                <span className="bg-[#1E8E3E] text-white text-lg font-black px-2 py-0.5 rounded-lg tracking-tight">iş buluyorum</span>
                             </div>
                             <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
                                 Gençler ile işverenleri buluşturarak istihdamı artıran, yeni nesil iş platformu.
@@ -96,7 +90,7 @@ export default function Footer() {
                     className="mt-12 pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4"
                 >
                     <p className="text-gray-500 text-sm">
-                        © {new Date().getFullYear()} Wincoi. Tüm hakları saklıdır.
+                        © {new Date().getFullYear()} Kolay İş Buluyorum. Tüm hakları saklıdır.
                     </p>
                     <div className="flex items-center gap-6">
                         <Link href="#" className="text-gray-500 hover:text-white text-sm transition-colors">

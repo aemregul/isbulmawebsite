@@ -56,11 +56,11 @@ export default function RegisterPage() {
     };
 
     return (
-        <div className="min-h-screen relative overflow-hidden flex items-center justify-center pt-20 pb-10" style={{ background: 'linear-gradient(160deg, #0F0E47 0%, #1B1A9E 25%, #2623D2 45%, #116DFF 65%, #1B1A9E 85%, #0A0A1B 100%)' }}>
+        <div className="min-h-screen relative overflow-hidden flex items-center justify-center pt-20 pb-10" style={{ background: 'linear-gradient(160deg, #0A0F0D 0%, #0D1A14 20%, #0F2318 40%, #0D1A14 60%, #0A1210 80%, #080E0B 100%)' }}>
             {/* Animated blobs */}
-            <div className="absolute w-[500px] h-[500px] rounded-full bg-[#5A48F5] opacity-20 blur-[80px] -top-20 -left-40" />
-            <div className="absolute w-[600px] h-[600px] rounded-full bg-[#116DFF] opacity-15 blur-[100px] -bottom-40 -right-40" />
-            <div className="absolute w-[300px] h-[300px] rounded-full bg-[#3B82F6] opacity-20 blur-[60px] top-1/3 right-1/4" />
+            <div className="absolute w-[500px] h-[500px] rounded-full bg-[#1E8E3E] opacity-[0.12] blur-[100px] -top-20 -left-40" />
+            <div className="absolute w-[600px] h-[600px] rounded-full bg-[#22C55E] opacity-[0.08] blur-[120px] -bottom-40 -right-40" />
+            <div className="absolute w-[300px] h-[300px] rounded-full bg-[#34D058] opacity-[0.10] blur-[80px] top-1/3 right-1/4" />
 
             {/* Grid pattern overlay */}
             <div
@@ -86,7 +86,10 @@ export default function RegisterPage() {
                             transition={{ type: 'spring', delay: 0.2 }}
                             className="flex items-center justify-center mx-auto mb-4"
                         >
-                            <Image src="/logo.png" alt="Wincoi" width={160} height={48} className="h-10 w-auto brightness-0 invert" />
+                            <div className="flex items-center gap-0.5 justify-center">
+                                <span className="text-white text-2xl font-black tracking-tight">kolay</span>
+                                <span className="bg-[#1E8E3E] text-white text-2xl font-black px-2.5 py-1 rounded-lg tracking-tight">iş buluyorum</span>
+                            </div>
                         </motion.div>
                         <h1 className="text-2xl font-bold text-white mb-1">Kayıt Ol</h1>
                         <p className="text-white/50 text-sm">Hemen ücretsiz hesap oluşturun</p>
@@ -178,7 +181,7 @@ export default function RegisterPage() {
                             whileTap={{ scale: 0.99 }}
                             type="submit"
                             disabled={loading}
-                            className="w-full py-3.5 bg-gradient-to-r from-[#2623D2] to-[#116DFF] text-white font-semibold rounded-xl flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-[#2623D2]/30 transition-all disabled:opacity-60 disabled:cursor-not-allowed !mt-6"
+                            className="w-full py-3.5 bg-gradient-to-r from-[#1E8E3E] to-[#34D058] text-white font-semibold rounded-xl flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-[#1E8E3E]/30 transition-all disabled:opacity-60 disabled:cursor-not-allowed !mt-6"
                         >
                             {loading ? (
                                 <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -196,7 +199,7 @@ export default function RegisterPage() {
                         Zaten hesabınız var mı?{' '}
                         <Link
                             href="/giris"
-                            className="text-[#818CF8] font-semibold hover:text-white transition-colors"
+                            className="text-[#6EE7B7] font-semibold hover:text-white transition-colors"
                         >
                             Giriş Yap
                         </Link>
