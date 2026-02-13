@@ -1,16 +1,45 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+const inter = Inter({
+  subsets: ["latin", "latin-ext"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  display: "swap",
+  variable: "--font-inter",
+});
+
 export const metadata: Metadata = {
-  title: "Wincoi - İş İlanları Platformu",
+  title: {
+    default: "Wincoi - İş İlanları Platformu",
+    template: "%s | Wincoi",
+  },
   description: "Gençler ile işverenleri buluşturarak istihdamı artıran, yeni nesil iş platformu.",
-  keywords: "iş ilanları, kariyer, istihdam, stajyer, part-time, wincoi",
+  keywords: "iş ilanları, kariyer, istihdam, stajyer, part-time, wincoi, iş ara, iş bul",
+  authors: [{ name: "Wincoi" }],
+  creator: "Wincoi",
+  metadataBase: new URL("https://isbulmawebsite.vercel.app"),
   openGraph: {
     title: "Wincoi - İş İlanları Platformu",
     description: "Gençler ile işverenleri buluşturarak istihdamı artıran, yeni nesil iş platformu.",
     type: "website",
+    locale: "tr_TR",
+    siteName: "Wincoi",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Wincoi - İş İlanları Platformu",
+    description: "Gençler ile işverenleri buluşturarak istihdamı artıran, yeni nesil iş platformu.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
 };
 
@@ -20,13 +49,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="tr">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-      </head>
-      <body className="min-h-screen flex flex-col">
+    <html lang="tr" className={inter.variable}>
+      <body className={`${inter.className} min-h-screen flex flex-col`}>
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
