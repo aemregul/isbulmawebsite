@@ -219,8 +219,8 @@ export default function HomePage() {
       icon: Search,
     },
     {
-      title: 'Hızlıca Başvur',
-      description: 'Beğendiğin ilana tek tıkla başvur. Özgeçmişini yükle, kendini tanıt.',
+      title: 'Tek Tıkla Ulaş',
+      description: 'Özgeçmiş yüklemeye gerek yok! Beğendiğin ilanı bul, tek tıkla doğrudan işverene ulaş.',
       icon: FileText,
     },
     {
